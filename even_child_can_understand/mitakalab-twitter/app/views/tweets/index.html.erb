@@ -1,0 +1,8 @@
+<h1>Timeline</h1>
+
+<% @tweets.each do |tweet| %>
+  <ul>
+    <h4><%= tweet.title %></h4>
+    <p><%= tweet.content %></p>
+  </ul>
+<% end %>
