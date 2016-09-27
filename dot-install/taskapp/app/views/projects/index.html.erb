@@ -2,7 +2,11 @@
 
 <ul>
   <% @projects.each do |project| %>
-    <li><%= link_to project.title, "/projects/#{project.id}" %></li>
+    <li>
+      <%= link_to project.title, "/projects/#{project.id}" %> (<%= project.tasks.unfinished.count %>)
+      <%= link_to "[Edit]", "/projects/#{project.id}/edit" %>
+      <%= link_to "[Delete]", "/projects/#{project.id}", method: :delete, data: {confirm: "Are you sure?" } %>
+    </li>
   <% end %>
 </ul>
 
