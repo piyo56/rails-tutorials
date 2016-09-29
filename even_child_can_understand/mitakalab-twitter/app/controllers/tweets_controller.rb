@@ -11,6 +11,6 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.create(params[:tweet].permit(:title, :content))
-    redirect_to '/tweets/index'
+    #redirect_to '/tweets/index'
   end
 end
