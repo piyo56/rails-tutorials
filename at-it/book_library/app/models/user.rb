@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_one :book
+
   validates :name,
     presence: {message: "名前を入力して下さい"}
 
